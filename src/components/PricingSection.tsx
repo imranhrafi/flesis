@@ -52,8 +52,8 @@ const PricingSection = () => {
   };
 
   return (
-    <div className="py-8">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section className="py-8" id='pricingSection'>
+      <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="mb-2 text-4xl font-bold text-gray-900">
             Our Pricing Plans
@@ -63,13 +63,13 @@ const PricingSection = () => {
             mobile app.
           </p>
         </div>
-        <div className="mb-8 flex justify-center">
+        <div className="flex justify-center mb-8">
           <div className="form-control">
-            <label className="label cursor-pointer">
+            <label className="cursor-pointer label">
               <span className="label-text"> Monthly </span>
               <input
                 type="checkbox"
-                className="toggle-primary toggle mx-6"
+                className="mx-6 toggle-primary toggle"
                 checked={isYearly}
                 onChange={handleToggle}
               />
@@ -77,9 +77,9 @@ const PricingSection = () => {
             </label>
           </div>
         </div>
-        <div className="gap-15 grid grid-cols-1 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-15 sm:grid-cols-3">
           {plans.map((plan, index) => (
-            <div key={index} className="rounded-lg bg-white p-8 shadow-md">
+            <div key={index} className="p-8 bg-white rounded-lg shadow-md">
               <p className="text-5xl text-primary">
                 {plan.price}
                 {isYearly ? (
@@ -88,7 +88,7 @@ const PricingSection = () => {
                   <span className="text-sm text-slate-400">/Monthly</span>
                 )}
               </p>
-              <h2 className=" my-3 text-2xl font-bold text-gray-900">
+              <h2 className="my-3 text-2xl font-bold text-gray-900 ">
                 {plan.title}
               </h2>
               <p className="mb-12 text-slate-400">{plan.description}</p>
@@ -96,12 +96,12 @@ const PricingSection = () => {
                 {plan.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="my-6 flex items-center text-gray-600 "
+                    className="flex items-center my-6 text-gray-600 "
                   >
                     {feature.available ? (
-                      <TiTick className="mr-2  text-primary " />
+                      <TiTick className="mr-2 text-primary " />
                     ) : (
-                      <TiTick className="mr-2  text-slate-400 " />
+                      <TiTick className="mr-2 text-slate-400 " />
                     )}
                     <p className="">{feature.name}</p>
                   </li>
@@ -117,7 +117,7 @@ const PricingSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

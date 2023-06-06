@@ -1,24 +1,27 @@
 import { about, addresses, links } from "../../data/footerData";
 import AboutLink from "./components/AboutLink";
+import Copyright from "./components/Copyright";
 import FooterIntro from "./components/FooterIntro";
 import FooterLinks from "./components/FooterLinks";
 import Office from "./components/Office";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className='flex flex-col mt-20 md:flex-row md:justify-between md:gap-4'>
+    <footer id='footer'>
+      <div className='flex flex-col p-6 mt-20 md:flex-row md:justify-between md:gap-4'>
         {/* Top */}
-        <div className='md:w-full'>
+        <div className='flex flex-col justify-between md:w-full'>
           <FooterIntro />
         </div>
 
         {/* Middle */}
-        <div className='md:w-1/2'>
-          <FooterLinks links={links} />
-        </div>
-        <div className='md:w-1/2'>
-          <AboutLink aboutData={about} />
+        <div className='flex justify-start my-6 md:w-full md:my-0'>
+          <div className=''>
+            <FooterLinks links={links} />
+          </div>
+          <div className=''>
+            <AboutLink aboutData={about} />
+          </div>
         </div>
 
         {/* Bottom */}
@@ -26,6 +29,7 @@ const Footer = () => {
           <Office addresses={addresses} />
         </div>
       </div>
+      <Copyright />
     </footer>
   );
 };

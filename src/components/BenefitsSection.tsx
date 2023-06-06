@@ -46,15 +46,15 @@ export const getBackgroundColor = (type: string) => {
 };
 const BenefitsSection = () => {
   return (
-    <section className='mt-[150px] w-full p-4'>
-      <article className='prose mx-auto mt-10 text-center md:prose-lg lg:prose-xl'>
+    <section className='mt-[150px] w-full p-4' id='benefitsSection'>
+      <article className='mx-auto mt-10 prose text-center md:prose-lg lg:prose-xl'>
         <h2>Get Benefits & Advantages</h2>
         <p>
           While we can customize your plan to suit your needs, most
           clients schedule regular services.
         </p>
       </article>
-      <div className='mt-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-3 mt-10 overflow-hidden md:grid-cols-2 lg:grid-cols-3'>
         {benefits.map((benefit) => (
           <article
             key={benefit.id}
@@ -73,7 +73,7 @@ const BenefitsSection = () => {
             <p className='mb-auto text-sm font-normal leading-[180%] text-gray-600'>
               {benefit.description}
             </p>
-            <a href='#' className='link-primary mt-auto underline'>
+            <a href='#' className='mt-auto underline link-primary'>
               Learn More
             </a>
           </article>

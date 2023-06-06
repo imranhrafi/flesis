@@ -1,24 +1,24 @@
 "use client";
 
-"use client";
-
 import { useRef } from "react";
 
 import Image from "next/image";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Slider from "react-slick";
 import { testimonials } from "../../data/testimonials";
+import ArrowIcon from "./ArrowIcon";
 import StarRating from "./StarRating";
 
 const TestimonialSlider = () => {
   const sliderRef = useRef<Slider>(null);
 
   const settings = {
+    arrows: false,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -35,38 +35,21 @@ const TestimonialSlider = () => {
     ],
   };
 
-  const PrevArrow = ({ onClick }: { onClick: () => void }) => (
-    <div
-      className=' w-12 h-12 absolute z-10 transform -translate-y-1/2 cursor-pointer bg-[#F4F4F4] hover:bg-primary p-2 -top-11 right-[200px] lg:right-[220px] rounded-full grid place-content-center  transition-all duration-500 hover:text-white'
-      onClick={() => {
-        onClick();
-        if (sliderRef.current) {
-          sliderRef.current.slickPrev(); // Move the slides to the left
-        }
-      }}
-    >
-      <FaChevronLeft className='text-xl font-normal text-slate-400 ' />
-    </div>
-  );
+  const handlePrevClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev(); // Move the slides to the left
+    }
+  };
 
-  const NextArrow = ({ onClick }: { onClick: () => void }) => (
-    <div
-      className='w-12 h-12 absolute z-10 transform -translate-y-1/2 cursor-pointer bg-[#F4F4F4] hover:bg-primary p-2 -top-11 right-[150px] rounded-full grid place-content-center transition-all duration-500 hover:text-white'
-      onClick={() => {
-        onClick();
-        if (sliderRef.current) {
-          sliderRef.current.slickNext(); // Move the slides to the right
-        }
-      }}
-    >
-      <FaChevronRight className='text-xl text-normal text-slate-400 ' />
-    </div>
-  );
-
+  const handleNextClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext(); // Move the slides to the right
+    }
+  };
   return (
-    <div className='relative'>
+    <div className='relative '>
       <div className='py-8 bg-white'>
-        <Slider {...settings} ref={sliderRef}>
+        <Slider {...settings} ref={sliderRef} className='text-center'>
           {testimonials.map((item, index) => (
             <div
               key={index}
@@ -105,8 +88,8 @@ const TestimonialSlider = () => {
           ))}
         </Slider>
       </div>
-      <PrevArrow onClick={() => {}} />
-      <NextArrow onClick={() => {}} />
+      <ArrowIcon direction='prev' onClick={handlePrevClick} />
+      <ArrowIcon direction='next' onClick={handleNextClick} />
     </div>
   );
 };

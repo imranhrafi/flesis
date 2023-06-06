@@ -2,7 +2,7 @@ import TestimonialSlider from "./ui/TestimonialSlider";
 
 const TestimonialSection = () => {
   return (
-    <section className='mt-28'>
+    <section className='mt-28' id='testimonialSection'>
       <article className='prose'>
         <p className='text-error'>TESTIMONIALS</p>
         <h1 className='my-5'>Client's Say About Us</h1>

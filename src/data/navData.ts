@@ -2,26 +2,26 @@ export const navData = [
   {
     id: "1",
     name: "Home",
-    path: "/",
+    path: "heroSection",
   },
   {
     id: "2",
-    name: "Services",
-    path: "/services",
+    name: "Benefits",
+    path: "benefitsSection",
   },
   {
     id: "3",
-    name: "About",
-    path: "/about",
+    name: "Pricing",
+    path: "pricingSection",
   },
   {
     id: "4",
-    name: "Tools",
-    path: "/tools",
+    name: "Testimonials",
+    path: "testimonialSection",
   },
   {
     id: "5",
     name: "Contact",
-    path: "/contact",
+    path: "footer",
   },
 ];

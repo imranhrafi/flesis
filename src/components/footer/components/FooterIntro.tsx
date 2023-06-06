@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FaFacebook,
   FaInstagram,
@@ -8,8 +9,11 @@ import {
 const FooterIntro = () => {
   return (
     <>
-      <h1 className='text-xl text-primary'>Flesis</h1>
-      <p className='text-sm leading-8 text-slate-500'>
+      <div className='flex gap-2'>
+        <Image src='/logo.png ' alt='logo' width={24} height={24} />
+        <h1 className='text-xl text-primary '>Flesis</h1>
+      </div>
+      <p className='my-8 text-sm leading-8 text-slate-500 md:my-0'>
         Manage your files efficiently and easily and it is a simple,
         fast and small file manager with a single file.
       </p>

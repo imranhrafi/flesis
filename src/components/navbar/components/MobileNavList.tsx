@@ -1,11 +1,15 @@
-import React from "react";
-import { NavbarProps } from "../Navbar";
 import clsx from "clsx";
+import { Link } from "react-scroll";
+import { NavbarProps } from "../Navbar";
 
 const MobileNavList = ({
   navData,
   mobileMenuOpen,
-}: NavbarProps & { mobileMenuOpen: boolean }) => {
+  handleToggleMobileMenu,
+}: NavbarProps & {
+  mobileMenuOpen: boolean;
+  handleToggleMobileMenu: () => void;
+}) => {
   return (
     <div
       className={clsx(
@@ -13,16 +17,28 @@ const MobileNavList = ({
         "mt-16 bg-white bg-opacity-60 backdrop-blur-lg backdrop-filter",
         "w-full sm:left-auto sm:w-full",
         "transform-gpu transition-transform duration-500 ease-in-out",
-        mobileMenuOpen ? "translate-x-0 sm:hidden" : "-translate-x-full"
+        mobileMenuOpen
+          ? "translate-x-0 sm:hidden"
+          : "-translate-x-full"
       )}
     >
-      <ul className="flex h-screen flex-col items-center justify-center gap-2">
-        {navData.map(({ id, name }) => (
+      <ul className='flex flex-col items-center justify-center h-screen gap-2'>
+        {navData.map(({ id, name, path }) => (
           <li
             key={id}
-            className="cursor-pointer text-black hover:text-primary "
+            className='text-black cursor-pointer hover:text-primary '
           >
-            {name}
+            <Link
+              activeClass='active'
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={handleToggleMobileMenu}
+            >
+              {name}
+            </Link>
           </li>
         ))}
       </ul>
