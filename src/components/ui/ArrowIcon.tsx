@@ -8,11 +8,11 @@ type ArrowProps = {
 
 const ArrowIcon = ({ direction, onClick }: ArrowProps) => {
   const arrowClasses = clsx(
-    "w-12 h-12 absolute z-10 transform -translate-y-1/2 cursor-pointer bg-[#F4F4F4] hover:bg-primary p-2 -top-11",
+    "w-12 h-12 absolute z-10 transform -translate-y-1/2 cursor-pointer bg-[#F4F4F4] hover:bg-primary p-2 -top-11 rounded-full",
     {
       "right-[200px] lg:right-[220px]": direction === "prev",
       "right-[150px]": direction === "next",
-      "hidden sm:block": true,
+      "hidden md:block": true,
     }
   );
 

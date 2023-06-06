@@ -18,12 +18,12 @@ const FooterIntro = () => {
         fast and small file manager with a single file.
       </p>
       <div className='flex gap-2'>
-        <FaFacebook className='p-4 text-white rounded bg-primary' />
-        <FaInstagram className='p-4 rounded bg-primary' />
+        <FaFacebook className='p-4 text-5xl text-white transition-all duration-300 rounded-full cursor-pointer bg-primary hover:scale-105' />
+        <FaInstagram className='p-4 text-5xl text-white transition-all duration-300 rounded-full cursor-pointer bg-primary hover:scale-105' />
 
-        <FaLinkedin className='p-4 rounded bg-primary' />
+        <FaLinkedin className='p-4 text-5xl text-white transition-all duration-300 rounded-full cursor-pointer bg-primary hover:scale-105' />
 
-        <FaYoutube className='p-4 rounded bg-primary' />
+        <FaYoutube className='p-4 text-5xl text-white transition-all duration-300 rounded-full cursor-pointer bg-primary hover:scale-105' />
       </div>
     </>
   );

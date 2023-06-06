@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
 
         {/* Middle */}
-        <div className='flex justify-start my-6 md:w-full md:my-0'>
+        <div className='flex justify-start my-6 md:justify-around md:w-full md:my-0'>
           <div className=''>
             <FooterLinks links={links} />
           </div>

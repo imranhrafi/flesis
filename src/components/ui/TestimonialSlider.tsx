@@ -49,7 +49,7 @@ const TestimonialSlider = () => {
   return (
     <div className='relative '>
       <div className='py-8 bg-white'>
-        <Slider {...settings} ref={sliderRef} className='text-center'>
+        <Slider {...settings} ref={sliderRef}>
           {testimonials.map((item, index) => (
             <div
               key={index}

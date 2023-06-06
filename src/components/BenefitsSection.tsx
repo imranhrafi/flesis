@@ -6,7 +6,7 @@ export const benefits = [
   {
     id: 1,
     name: "Easy to Use",
-    icon: <FaCogs className='p-4 text-5xl text-white' />,
+    icon: <FaCogs className='p-4 text-6xl text-white' />,
     description:
       "Create, edit, copy, move, and download your files easily, everywhere, every time. Use it as your personal cloud.",
     link: "#",
@@ -15,7 +15,7 @@ export const benefits = [
   {
     id: 2,
     name: "Drag & Drop",
-    icon: <BiGitMerge className='p-4 text-4xl text-white' />,
+    icon: <BiGitMerge className='p-4 text-6xl text-white' />,
     description:
       "Ajax Upload, the ability to drag & drop, multiple files upload, and upload using URL with file extensions filter.",
     link: "#",
@@ -24,7 +24,7 @@ export const benefits = [
   {
     id: 3,
     name: "Multiple Users",
-    icon: <IoMdPeople className='p-4 text-5xl text-white' />,
+    icon: <IoMdPeople className='p-4 text-6xl text-white' />,
     description:
       "Multiple users are supported, each with their own folder, permissions, and access roles.",
     link: "#",
