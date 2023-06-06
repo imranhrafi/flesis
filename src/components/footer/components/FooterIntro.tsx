@@ -10,7 +10,7 @@ const FooterIntro = () => {
   return (
     <>
       <div className='flex gap-2'>
-        <Image src='/logo.png ' alt='logo' width={24} height={24} />
+        <Image src='/logo.png' alt='logo' width={24} height={24} />
         <h1 className='text-xl text-primary '>Flesis</h1>
       </div>
       <p className='my-8 text-sm leading-8 text-slate-500 md:my-0'>
