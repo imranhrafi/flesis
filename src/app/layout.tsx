@@ -4,7 +4,7 @@ import React from "react";
 import "./globals.css";
 
 export const metadata = {
-  title: "Flesis",
+  title: "Flesis - Manage you file easily and effectively",
   description: "GLet’s Manage Your Files Easier And Simple",
 };
 
