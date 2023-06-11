@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { Link } from "react-scroll";
+import NextLink from "../../ui/NextLink";
 import { NavbarProps } from "../Navbar";
 
 const MobileNavList = ({
@@ -41,6 +42,11 @@ const MobileNavList = ({
             </Link>
           </li>
         ))}
+        <li className=' md:hidden'>
+          <button className='text-xs font-normal btn btn-outline btn-primary btn-sm'  onClick={handleToggleMobileMenu}>
+            <NextLink href='/auth'>Sign Up</NextLink>
+          </button>
+        </li>
       </ul>
     </div>
   );

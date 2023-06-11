@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Link } from "react-scroll";
-
+import { navData } from "../../data/navData";
+import NextLink from "../ui/NextLink";
 import MobileNavList from "./components/MobileNavList";
 import HumbergerIcon from "./components/humburgerIcon";
 
@@ -15,7 +16,7 @@ export type NavbarProps = {
   navData: NavDataItem[];
 };
 
-const Navbar = ({ navData }: NavbarProps) => {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] =
     useState<boolean>(false);
 
@@ -27,7 +28,7 @@ const Navbar = ({ navData }: NavbarProps) => {
     <header>
       <nav className='text-black bg-white navbar'>
         <div className='text-2xl cursor-pointer navbar-start text-primary-focus bold'>
-          Flesis
+          <NextLink href='/'>Flesis</NextLink>
         </div>
 
         <div className='hidden navbar-center md:flex'>
@@ -42,8 +43,8 @@ const Navbar = ({ navData }: NavbarProps) => {
                   to={path}
                   spy={true}
                   smooth={true}
-                  offset={-70} // Adjust the offset value to match your specific layout
-                  duration={500} // Adjust the duration as desired
+                  offset={-70}
+                  duration={500}
                 >
                   {name}
                 </Link>
@@ -53,7 +54,7 @@ const Navbar = ({ navData }: NavbarProps) => {
         </div>
         <div className='hidden navbar-end md:flex'>
           <button className='text-xs font-normal btn btn-outline btn-primary btn-sm'>
-            Sign Up
+            <NextLink href='/auth'>Sign Up</NextLink>
           </button>
         </div>
         <div className='navbar-end md:hidden'>

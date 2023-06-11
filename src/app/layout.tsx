@@ -1,6 +1,8 @@
 import Head from "next/head";
 import React from "react";
 
+import Footer from "../components/footer/Footer";
+import Navbar from "../components/navbar/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -27,7 +29,11 @@ export default function RootLayout({
           rel='stylesheet'
         />
       </Head>
-      <body className='max-w-screen-xl mx-auto'>{children}</body>
+      <body className='max-w-screen-xl mx-auto'>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
